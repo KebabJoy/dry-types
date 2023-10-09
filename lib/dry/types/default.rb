@@ -77,7 +77,7 @@ module Dry
 
       # Replace underlying type
       def __new__(type)
-        self.class.new(type, value, options)
+        self.class.new(type, value, **options)
       end
     end
   end

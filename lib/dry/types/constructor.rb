@@ -122,7 +122,7 @@ module Dry
           response = type.__send__(meth, *args, &block)
 
           if response.kind_of?(Builder)
-            self.class.new(response, options)
+            self.class.new(response, **options)
           else
             response
           end

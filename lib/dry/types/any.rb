@@ -2,7 +2,7 @@ module Dry
   module Types
     Any = Class.new(Definition) do
       def initialize(**options)
-        super(::Object, options)
+        super(::Object, **options)
       end
 
       # @return [String]

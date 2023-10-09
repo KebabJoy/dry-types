@@ -8,7 +8,7 @@ group :test do
     gem 'simplecov', require: false
   end
 end
-
+gem 'dry-logic', git: 'https://gitlab.overteam.ru/overteam/med/dry-logic.git', branch: 'release-0.5-r3'
 group :tools do
   gem 'pry-byebug', platform: :mri
   gem 'mutant'

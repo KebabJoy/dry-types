@@ -148,7 +148,9 @@ module Dry
           end
 
           if result.size < member_types.size
-            resolve_missing_keys(result, &Proc.new)
+            resolve_missing_keys(result) do |type, _k, callee|
+              type.call(callee)
+            end
           end
 
           result

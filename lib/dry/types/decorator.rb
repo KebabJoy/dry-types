@@ -9,7 +9,7 @@ module Dry
       attr_reader :type
 
       # @param [Type] type
-      def initialize(type, *)
+      def initialize(type, *, **)
         super
         @type = type
       end
@@ -79,7 +79,7 @@ module Dry
 
       # Replace underlying type
       def __new__(type)
-        self.class.new(type, options)
+        self.class.new(type, **options)
       end
     end
   end
